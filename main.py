@@ -86,8 +86,6 @@ def clear_chat(session_id: str = Form(...)):
     store[session_id] = ChatMessageHistory()
     return {"status": "cleared"}
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
+
 
   
