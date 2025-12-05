@@ -4,12 +4,14 @@ FROM python:3.10-slim-buster
 # 2. Set working directory
 WORKDIR /app
 
-# 3. Install dependencies
-COPY requirements.txt
+# 3. Copy the app source code
+COPY . .
+
+# 4. Install dependencies
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 4. Copy the app source code
-COPY . .
+
 
 # 5. Expose port
 EXPOSE 8080
